@@ -1,8 +1,16 @@
 package lk.ijse.gdse68.taskservice;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-06
+ #* @project : task manager (Treinetic-intern-Assignment)
+
+ #**/
 @SpringBootApplication
 public class TaskServiceApplication {
 
@@ -10,4 +18,8 @@ public class TaskServiceApplication {
 		SpringApplication.run(TaskServiceApplication.class, args);
 	}
 
+	@Bean
+	public ModelMapper modelMapper(){
+		return new ModelMapper();
+	}
 }
