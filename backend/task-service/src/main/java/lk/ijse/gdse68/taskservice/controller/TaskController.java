@@ -41,7 +41,7 @@ public class TaskController {
     }
 
 
-    //TODO: update Task
+    //TODO: delete Task
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTask(@PathVariable Long id){
         taskService.delete(id);
