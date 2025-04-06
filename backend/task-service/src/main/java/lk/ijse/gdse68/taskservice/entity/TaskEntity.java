@@ -13,9 +13,10 @@ import java.time.LocalDateTime;
  #* @project : task manager (Treinetic-intern-Assignment)
  #**/
 
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "tasks")
 public class TaskEntity {
@@ -29,7 +30,12 @@ public class TaskEntity {
         private String description;
     @Column(name = "status", nullable = false)
         private String status;
-    @Column(name = "createdAt", nullable = false)
-        private LocalDateTime createdAt;
+    @Column(name = "created_at", nullable = false)
+    private LocalDateTime createdAt;
+
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDateTime.now();  // Set current time before persisting
+    }
 
 }

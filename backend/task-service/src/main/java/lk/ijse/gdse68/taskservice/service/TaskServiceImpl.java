@@ -34,6 +34,7 @@ public class TaskServiceImpl implements TaskService {
                 .orElseThrow(() -> new DataPersistFailedException("Failed to save Task data!!"));
     }
 
+
     @Override
     public void delete(Long id) {
         if (taskDAO.existsById(id)) {
@@ -44,7 +45,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public void update(Long id, TaskDTO dto) throws ClassNotFoundException {
+    public void update(Long id, TaskDTO dto)  {
         TaskEntity taskEntity = taskDAO.findById(id)
                 .orElseThrow(() -> new TaskNotFoundException("Task not found for update!!"));
 
