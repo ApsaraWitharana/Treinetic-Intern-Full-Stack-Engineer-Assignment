@@ -15,6 +15,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-07
+ #* @project : task manager (Treinetic-intern-Assignment)
+ #**/
+
 @Component
 @PropertySource(ignoreResourceNotFound = true,value = "classpath:otherprops.properties")
 public class JwtUtil implements Serializable {
@@ -56,6 +62,7 @@ public class JwtUtil implements Serializable {
 
     public String generateToken(UserDTO userDTO){
         Map<String, Object> claims = new HashMap<>();
+        claims.put("role",userDTO.getRole());
         return doGenerateToken(claims,userDTO.getEmail());
     }
 
@@ -74,6 +81,5 @@ public class JwtUtil implements Serializable {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
-
 
 }

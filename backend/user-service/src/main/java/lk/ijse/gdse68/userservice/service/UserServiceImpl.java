@@ -5,6 +5,7 @@ import lk.ijse.gdse68.userservice.dao.UserRepository;
 import lk.ijse.gdse68.userservice.dto.AuthDTO;
 import lk.ijse.gdse68.userservice.dto.UserDTO;
 import lk.ijse.gdse68.userservice.entity.UserEntity;
+import lk.ijse.gdse68.userservice.util.RoleEnum;
 import lk.ijse.gdse68.userservice.util.VarList;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Set;
+
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-07
+ #* @project : task manager (Treinetic-intern-Assignment)
+ #**/
 
 @Transactional
 @Service
@@ -35,6 +42,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
             AuthDTO authDTO = new AuthDTO();
+            authDTO.setRole(String.valueOf(RoleEnum.valueOf(userDTO.getRole())));
             userRepository.save(modelMapper.map(userDTO, UserEntity.class));
             return VarList.Created;
         }
@@ -67,6 +75,4 @@ public class UserServiceImpl implements UserDetailsService, UserService {
             return null;
         }
     }
-
-
 }

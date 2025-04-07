@@ -19,6 +19,12 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-07
+ #* @project : task manager (Treinetic-intern-Assignment)
+ #**/
+
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
@@ -39,7 +45,9 @@ public class JwtFilter extends OncePerRequestFilter {
         if (authorization != null && authorization.startsWith("Bearer ")) {
             token = authorization.substring(7);
             email = jwtUtil.getUsernameFromToken(token);
+            Claims claims = jwtUtil.getUserRoleCodeFromToken(token); //check the role
             request.setAttribute("email", email);
+            request.setAttribute("role", claims.get("role"));
         }
 
         if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {

@@ -19,6 +19,13 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-07
+ #* @project : task manager (Treinetic-intern-Assignment)
+ #**/
+
 @CrossOrigin(origins = "*")
 @EnableWebSecurity
 @Configuration
