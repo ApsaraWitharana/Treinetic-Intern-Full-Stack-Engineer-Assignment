@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class TaskServiceApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(TaskServiceApplication.class, args);
 	}
