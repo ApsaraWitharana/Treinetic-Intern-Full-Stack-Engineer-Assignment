@@ -9,18 +9,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ #* @author : sachini apsara
+ #* @date : 2024-04-06
+ #* @project : task manager (Treinetic-intern-Assignment)
+ #**/
+
 @RestController
 @RequestMapping("api/v1/tasks")
 
 public class TaskController {
-
     private final TaskService taskService;
-
 
     public TaskController(TaskService taskService) {
         this.taskService = taskService;
     }
-
 
     //TODO: getAll Task
     @GetMapping
@@ -39,7 +42,6 @@ public class TaskController {
             return ResponseEntity.status(500).body(ex.getMessage()); // Internal Server Error
         }
     }
-
 
     //TODO: delete Task
     @DeleteMapping("/{id}")

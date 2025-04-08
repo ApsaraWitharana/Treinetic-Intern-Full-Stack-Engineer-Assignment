@@ -1,0 +1,25 @@
+# Use a valid Maven image that supports JDK 17
+FROM maven:3.8.6-eclipse-temurin-17 AS build
+
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+
+RUN mvn clean install -DskipTests
+
+# Final image
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+
+COPY --from=build /app/target/task-service-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8082
+CMD ["java", "-jar", "app.jar"]
+
+
+
+#/**
+# #* @author : sachini apsara
+# #* @date : 2024-04-08
+# #* @project : task manager (Treinetic-intern-Assignment)
+# #**/
