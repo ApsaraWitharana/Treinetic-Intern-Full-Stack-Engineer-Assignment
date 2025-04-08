@@ -1,0 +1,8 @@
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container{
+    background-image: url('../../assets/waves-large@2x.0f45956af565d8c3dea9.png');
+    height: 100vh;
+}
