@@ -81,17 +81,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.id }}</td>
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.status }}</td>
+      <td>{{ task.createdAt }}</td>
       <td>
-        <button class="btn-edit">
+        <button class="btn-edit" (click)="updateTask(task.id, task)">
           <i class="fas fa-edit"></i> Edit
         </button>
-        <button class="btn-delete">
+        <button class="btn-delete" (click)="deleteTask(task.id)">
           <i class="fas fa-trash-alt"></i> Delete
         </button>
       </td>

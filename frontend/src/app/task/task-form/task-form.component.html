@@ -1,14 +1,15 @@
-<!-- task-form.component.html -->
 <div class="task-form">
   <h3>Task Form</h3>
-  <input  placeholder="Title" />
-  <textarea placeholder="Description"></textarea>
-  <select>
-    <option value="" disabled>Select Status</option>
-    <option value="TO_DO">To Do</option>
-    <option value="IN_PROGRESS">In Progress</option>
-    <option value="DONE">Done</option>
-  </select>
-  <input  readonly />
-  <button >Save Task</button>
+  <form (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="task.title" name="title" placeholder="Title" required />
+    <textarea [(ngModel)]="task.description" name="description" placeholder="Description" required></textarea>
+    <select [(ngModel)]="task.status" name="status" required>
+      <option value="" disabled>Select Status</option>
+      <option value="TO_DO">To Do</option>
+      <option value="IN_PROGRESS">In Progress</option>
+      <option value="DONE">Done</option>
+    </select>
+    <input [value]="task.createdAt" readonly placeholder="Created At" *ngIf="task.createdAt" />
+    <button type="submit">Save Task</button>
+  </form>
 </div>
