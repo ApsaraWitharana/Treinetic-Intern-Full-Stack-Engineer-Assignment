@@ -4,6 +4,13 @@ import { Router } from '@angular/router';
 import { TaskService, Task } from '../../service/task.service';
 import { CommonModule } from '@angular/common';
 
+
+/**
+ #    #* @author : sachini apsara
+ #    #* @date : 2024-04-09
+ #  #* @project : task manager (Treinetic-intern-Assignment)
+ #  #**/
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,

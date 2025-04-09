@@ -5,6 +5,12 @@ import { Task } from '../../model/task.model';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
+
+  /**
+ #    #* @author : sachini apsara
+ #    #* @date : 2024-04-09
+ #  #* @project : task manager (Treinetic-intern-Assignment)
+ #  #**/
 @Component({
   selector: 'app-task-form',
   standalone: true,

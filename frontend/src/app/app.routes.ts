@@ -19,3 +19,10 @@ export const routes: Routes = [
 })
 
 export class AppRoutingModule { }
+
+
+/**
+ #    #* @author : sachini apsara
+ #    #* @date : 2024-04-09
+ #  #* @project : task manager (Treinetic-intern-Assignment)
+ #  #**/
