@@ -14,5 +14,8 @@ export class LoginComponent {
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
+  login() {
+      this.router.navigate(['/task_list']);
+  }
 
 }

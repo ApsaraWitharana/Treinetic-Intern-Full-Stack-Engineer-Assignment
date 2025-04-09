@@ -1,0 +1,78 @@
+/* Task List Container */
+.task-list {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.task-list h3 {
+  color: #6a1b9a;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Add Task Button */
+.add-task-btn {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.add-task-btn:hover {
+  background-color: #9c4d97;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #6a1b9a;
+  color: white;
+  font-size: 16px;
+}
+
+td {
+  font-size: 14px;
+}
+
+/* Action Buttons */
+button {
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+
+
+.btn-delete:hover {
+  background-color: rgba(183, 28, 28, 0.32);
+}
+
+/* Edit Button */
+.btn-edit:hover {
+  background-color: rgba(0, 128, 0, 0.37);
+}

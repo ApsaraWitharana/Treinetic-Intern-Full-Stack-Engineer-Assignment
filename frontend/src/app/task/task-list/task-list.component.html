@@ -1,0 +1,101 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .task-list {
+      padding: 20px;
+    }
+
+    .task-list table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+
+    .task-list table th,
+    .task-list table td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    .btn-delete,
+    .btn-edit {
+      background-color: transparent;
+      border: none;
+      color: #6a1b9a;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 5px 10px;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 10px;
+      transition: color 0.3s;
+    }
+
+    .btn-delete:hover,
+    .btn-edit:hover {
+      color: #d32f2f;
+    }
+
+    .btn-delete i,
+    .btn-edit i {
+      margin-right: 5px;
+    }
+
+    .add-task-btn {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-task-btn:hover {
+      background-color: #4e1a7c;
+    }
+
+    .task-list table td:last-child {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  </style>
+</head>
+<div class="task-list">
+  <h3>Task List</h3>
+  <button class="add-task-btn">Add Task</button>
+
+  <!-- Task Table -->
+  <table class="task-table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <button class="btn-edit">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn-delete">
+          <i class="fas fa-trash-alt"></i> Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
