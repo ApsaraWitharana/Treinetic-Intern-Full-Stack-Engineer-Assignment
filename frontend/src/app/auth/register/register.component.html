@@ -1,0 +1,50 @@
+<div class="main-container w-100 d-flex justify-content-center align-items-center">
+  <form action="" class="form-box w-25 h-auto bg-white rounded-pill shadow-lg p-5 text-center">
+    <!-- Header -->
+    <h5 class="fs-4 text-purple fw-semibold">Register to Treinetic Workspace</h5>
+
+    <!-- Subheading -->
+    <p class="text-dark fw-medium fs-6">Create your account to start managing tasks</p>
+
+    <!-- Form Fields -->
+    <div class="d-flex flex-column gap-4 mt-5 mb-4">
+      <div class="form-floating">
+        <input type="email" class="form-control fs-7 border-purple" placeholder="name@example.com">
+        <label class="fs-7 text-purple">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control fs-7 border-purple" placeholder="Enter your password">
+        <label class="fs-7 text-purple">Password</label>
+      </div>
+      <div class="form-floating">
+        <select class="form-select fs-7 border-purple" id="role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="USER">User</option>
+          <option value="ADMIN">Admin</option>
+        </select>
+        <label for="role" class="fs-7 text-purple">Role</label>
+      </div>
+    </div>
+
+    <!-- Terms -->
+    <div class="d-flex gap-2 mb-4 justify-content-start">
+      <input type="checkbox" class="mt-1">
+      <label class="text-dark fs-7">I agree to the <a class="text-purple text-decoration-none">Terms and Conditions</a></label>
+    </div>
+
+    <!-- Register Button -->
+    <button class="btn btn-purple w-100 py-2 rounded-pill">Register</button>
+
+    <!-- OR divider -->
+    <div class="d-flex w-100 gap-4 align-items-center my-3">
+      <hr class="w-100 text-dark border-2">
+      <span class="text-dark fw-medium fs-8">OR</span>
+      <hr class="w-100 text-dark border-2">
+    </div>
+
+    <!-- Navigate to Login -->
+    <button (click)="navigateToLogin()" class="btn btn-outline-purple w-100 py-2 rounded-pill ">
+      Login
+    </button>
+  </form>
+</div>

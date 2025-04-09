@@ -3,16 +3,15 @@ import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   imports: [],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
-export class LoginComponent {
+export class RegisterComponent {
   constructor(private fb: FormBuilder , private router: Router) {}
 
-  navigateToRegister() {
-    this.router.navigate(['/register']);
+  navigateToLogin() {
+    this.router.navigate(['/login']);
   }
-
 }

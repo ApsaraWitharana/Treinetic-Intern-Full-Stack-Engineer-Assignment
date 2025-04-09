@@ -5,13 +5,13 @@
 .main-container {
   background: url('../../assets/img.png') no-repeat center center;
   background-size: cover;
-  object-fit: cover;
   height: 100vh;
 }
 
 .form-box {
-  border-radius: 12px !important; /* Medium-rounded (md) */
+  border-radius: 12px !important;
 }
+
 .text-purple {
   color: #7419bd !important;
 }
@@ -20,7 +20,7 @@
   border: 1px solid #7419bd !important;
 }
 
-.form-control:focus {
+.form-control:focus, .form-select:focus {
   border-color: #7419bd;
   box-shadow: 0 0 0 0.2rem rgba(116, 25, 189, 0.3);
 }
