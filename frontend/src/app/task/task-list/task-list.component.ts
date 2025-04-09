@@ -11,4 +11,9 @@ import {Router} from '@angular/router';
 export class TaskListComponent{
   constructor(private fb: FormBuilder , private router: Router) {}
 
+  protected readonly navigator = navigator;
+  navigatingForm() {
+    this.router.navigate(['/task_form']);
+  }
+
 }
