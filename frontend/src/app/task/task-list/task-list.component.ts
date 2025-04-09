@@ -28,7 +28,14 @@ export class TaskListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getAllTasks();
+    this.taskService.getAllTasks().subscribe(
+      (data) => {
+        this.tasks = data;
+      },
+      (error) => {
+        console.error('Error fetching tasks:', error);
+      }
+    );
   }
 
   getAllTasks(): void {
