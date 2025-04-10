@@ -68,7 +68,8 @@ This project is a full-stack application designed for managing tasks with CRUD o
 - [Docker Docs](https://docs.docker.com/)
 
 #### 🔜 Frontend  
-- [Angular Docs](https://angular.io/docs)  
+- [Angular Docs](https://angular.io/docs)
+- [Angular Docs(CLI)](https://angular.dev/overview)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)  
 - [Bootstrap Docs](https://getbootstrap.com/docs/)  
 - [Express.js Guide](https://expressjs.com/en/starter/installing.html)
