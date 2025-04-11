@@ -58,6 +58,22 @@ This project is a full-stack application designed for managing tasks with CRUD o
 ```   
    https://documenter.getpostman.com/view/35385905/2sB2cX928z
 ```
+
+### 📚 Reference Documentation
+
+#### 🔙 Backend  
+- [Spring Boot Docs](https://spring.io/projects/spring-boot)  
+- [JWT (Auth0)](https://auth0.com/docs/secure/tokens/json-web-tokens)  
+- [MySQL Docs](https://dev.mysql.com/doc/)  
+- [Docker Docs](https://docs.docker.com/)
+
+#### 🔜 Frontend  
+- [Angular Docs](https://angular.io/docs)
+- [Angular Docs(CLI)](https://angular.dev/overview)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)  
+- [Bootstrap Docs](https://getbootstrap.com/docs/)  
+- [Express.js Guide](https://expressjs.com/en/starter/installing.html)
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
